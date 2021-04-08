@@ -53,21 +53,22 @@ public class AboutDates {
     @Koan
     public void usingDateFormatToFormatDateShort() {
         String formattedDate = DateFormat.getDateInstance(DateFormat.SHORT).format(date);
-        assertEquals(formattedDate, __);
+        //  System.out.println(formattedDate);
+        assertEquals(formattedDate, "1973/03/03");
     }
 
     @Koan
     public void usingDateFormatToFormatDateFull() {
         String formattedDate = DateFormat.getDateInstance(DateFormat.FULL).format(date);
         // There is also DateFormat.MEDIUM and DateFormat.LONG... you get the idea ;-)
-        assertEquals(formattedDate, __);
+        assertEquals(formattedDate, "Saturday, 03 March 1973");
     }
 
     @Koan
     public void usingDateFormatToParseDates() throws ParseException {
         DateFormat dateFormat = new SimpleDateFormat("MM-dd-yyyy");
         Date date2 = dateFormat.parse("01-01-2000");
-        assertEquals(date2.toString(), __);
+        assertEquals(date2.toString(), "Sat Jan 01 00:00:00 SAST 2000");
         // What happened to the time? What do you need to change to keep the time as well?
     }
 }
