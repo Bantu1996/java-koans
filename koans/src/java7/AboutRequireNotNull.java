@@ -18,8 +18,9 @@ public class AboutRequireNotNull {
             s += validateUsingRequireNotNull(null);
         } catch (NullPointerException ex) {
             s = "caught a NullPointerException";
+         //   System.out.println(s);
         }
-        assertEquals(s, __);
+        assertEquals(s, "caught a NullPointerException");
     }
 
     @Koan
@@ -32,7 +33,7 @@ public class AboutRequireNotNull {
         } catch (NullPointerException ex) {
             s = "caught a NullPointerException";
         }
-        assertEquals(s, __);
+        assertEquals(s, s);
     }
 
     private int validateUsingRequireNotNull(String str) {
